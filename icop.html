@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      img {
+        vertical-align: middle;
+      }
+      label {
+        filter: brightness(0);
+        border: 3px solid white;
+        display: inline-block;
+        margin: 3px;
+        transition: 3s;
+        user-select: none;
+      }
+      input:checked + label {
+        filter: brightness(1);
+        border: 3px solid orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      $(function () {
+        $("body").append("<div></div>");
+        $("body > div").addClass("wrap");
+        var i = 0;
+        while (i < 31) {
+          $(".wrap").append("<input type='checkbox' id='sel" + i + "'>");
+          $(".wrap").append(
+            "<label for='sel" +
+              i +
+              "'><img src='images/icon_portrait(" +
+              i +
+              ").png'></label>"
+          );
+          i++;
+        }
+        $("body").append("<p> Selected Items </p>");
+        $("body").append("<p id='selected'> aaaaa </p>");
+        $(".wrap > input").change(function () {
+          var len = $(".wrap > input:checked").length;
+          var str = "";
+          for (var i = 0; i < len; i++) {
+            str += $(".wrap > input:checked").eq(i).attr("id") + "";
+          }
+          $("#selected").html(str);
+        });
+        $("input").css("position", "absolute").css("left", "-99999px");
+      });
+    </script>
+  </body>
+</html>

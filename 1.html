@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title>Ajax</title>
+  </head>
+  <body>
+    <script>
+      var itemInfo;
+      $.ajax({
+        dataType: "json",
+        type: "get",
+        url: "data.json",
+        success: function (data) {
+          itemInfo = data; //가져온 데이터 저장
+          console.log(data);
+          console.log(data.length);
+          for (var i = 0; i < data.length; i++) {
+            console.log(data[i].title, data[i].desc);
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

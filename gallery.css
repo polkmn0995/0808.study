@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Oxygen|Sunflower:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Oxygen|Sunflower:300&display=swap");
+/* font-family: 'Oxygen', sans-serif;
+font-family: 'Sunflower', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif; */
+.gallery_wrap {
+  width: 1080px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.gallery_item {
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.gallery_item > img {
+  width: 250px;
+}
+.gallery_item > .item_desc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s;
+  user-select: none;
+}
+.gallery_item > .item_desc:hover {
+  opacity: 1;
+}
+.item_desc > h1 {
+  color: #f1f1f1;
+  font-size: 24px;
+  padding-top: 80px;
+  text-align: center;
+}
+.item_desc > p {
+  color: #f1f1f1;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+}
+.gallery_detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+}
+.gallery_detail_wrap {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+}
+.gallery_detail_wrap > div {
+  float: left;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.detail_left > img {
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.detail_right > .content {
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.content {
+  color: #f1f1f1;
+}
+.content h1 {
+  font-size: 44px;
+  font-family: "Sunflower", sans-serif;
+  font-weight: bold;
+}
+
+.content .title_line {
+  height: 2px;
+  background-color: #f1f1f1;
+  margin: 20px auto;
+}
+.content p {
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.gallery_detail > a {
+  color: #f1f1f1;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+}

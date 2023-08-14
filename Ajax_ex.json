@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "아이템 제목 1",
+    "desc": "아이템 설명 1",
+    "image": "gallery1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "아이템 제목 2",
+    "desc": "아이템 설명 2",
+    "image": "gallery2.png"
+  },
+  {
+    "id": 2,
+    "title": "아이템 제목 2",
+    "desc": "아이템 설명 2",
+    "image": "gallery2.png"
+  },
+  {
+    "id": 2,
+    "title": "아이템 제목 2",
+    "desc": "아이템 설명 2",
+    "image": "gallery2.png"
+  },
+  {
+    "id": 2,
+    "title": "아이템 제목 2",
+    "desc": "아이템 설명 2",
+    "image": "gallery2.png"
+  },
+  {
+    "id": 2,
+    "title": "아이템 제목 2",
+    "desc": "아이템 설명 2",
+    "image": "gallery2.png"
+  },
+  {
+    "id": 2,
+    "title": "아이템 제목 2",
+    "desc": "아이템 설명 2",
+    "image": "gallery2.png"
+  }
+]
